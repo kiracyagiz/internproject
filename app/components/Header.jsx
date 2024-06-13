@@ -1,0 +1,81 @@
+import React from "react";
+import { IoSearchOutline } from "react-icons/io5";
+import { MdAccountCircle } from "react-icons/md";
+import { FaShoppingCart } from "react-icons/fa";
+import SelectableButton from "./Button/SelectableButton";
+import { IoMdMenu } from "react-icons/io";
+
+export default function Header() {
+  const selectableData = [
+    { 
+      title: "Community",
+      icon: "",
+      selectable: false,
+    },
+    {
+      title: "Account",
+      icon: <MdAccountCircle size={20} />,
+      selectable: true,
+    },
+    {
+      title: "Cart",
+      icon: <FaShoppingCart />,
+      selectable: true,
+    },
+  ];
+
+  return (
+    <header>
+      <div className="flex flex-row justify-between lg:justify-evenly text-center items-center">
+        {/* Tabs*/}
+        <div className="flex flex-row items-center gap-x-4">
+        <button className="md:relative md:bg-white md:text-blue-600 p-4 overflow-hidden">
+  <span className="md:absolute md:top-0 md:left-0 md:right-0 md:h-1 md:bg-blue-600"></span>
+  Wholesale - Pros Only
+</button>
+          <button>Retail</button>
+        </div>
+
+        {/* Searchbar*/}
+
+        <div className="flex-row items-center hidden  md:flex lg:flex my-2">
+          <input
+            type="text"
+            placeholder="Search by name, category.."
+            className="px-8 py-2 pr-10 text-center border rounded-l-[5px] border-[#1A355C] w-full md:w-48 lg:w-96 focus:outline-none"
+          />
+          <div className="bg-[#1A355C]  rounded-r-[5px] p-[13px]">
+            <IoSearchOutline size={16} className="text-white" />
+          </div>
+        </div>
+
+        <div className="flex font-bold  flex-row gap-x-8">
+          {selectableData.map((dt, i) => (
+            <SelectableButton
+              icon={dt.icon}
+              title={dt.title}
+              key={i}
+              selectable={dt.selectable}
+            />
+          ))}
+        <IoMdMenu size={18} className='flex lg:hidden md:hidden'/>
+        </div>
+
+      </div>
+
+        {/* Searchbar for mobile*/}
+
+        <div className="flex-row items-center flex  min-w-full md:hidden lg:hidden my-2">
+          <input
+            type="text"
+            placeholder="Search by name, category.."
+            className="px-8 py-1 pr-10 text-center border border-[#1A355C] w-full md:w-96 focus:outline-none"
+          />
+          <div className="bg-[#1A355C]  rounded-r-[5px] p-[9px]">
+            <IoSearchOutline size={16} className="text-white" />
+
+          </div>
+        </div>
+    </header>
+  );
+}

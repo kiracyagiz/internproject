@@ -10,8 +10,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="bg-[#EEEEEE]">
+          {/* Container is the global padding for edges of the page*/}
+
+      <body className="container mx-auto px-4 md:px-8 lg:px-16">{children}</body>
     </html>
   );
 }
