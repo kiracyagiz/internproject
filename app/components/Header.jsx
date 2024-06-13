@@ -7,7 +7,7 @@ import { IoMdMenu } from "react-icons/io";
 
 export default function Header() {
   const selectableData = [
-    { 
+    {
       title: "Community",
       icon: "",
       selectable: false,
@@ -26,15 +26,22 @@ export default function Header() {
 
   return (
     <header>
-      <div className="flex flex-row justify-between lg:justify-evenly text-center items-center">
+      <div className="flex flex-row  bg-[#EEEEEE] px-4 lg:px-0 justify-between lg:justify-evenly text-center items-center">
         {/* Tabs*/}
         <div className="flex flex-row items-center gap-x-4">
-        <button className="md:relative md:bg-white md:text-blue-600 p-4 overflow-hidden">
-  <span className="md:absolute md:top-0 md:left-0 md:right-0 md:h-1 md:bg-blue-600"></span>
-  Wholesale - Pros Only
-</button>
-          <button>Retail</button>
+          <div>
+            <button className="md:relative md:bg-white font-bold md:text-blue-400 p-4 overflow-hidden">
+              <span className="md:absolute md:top-0 md:left-0 md:right-0 md:h-1  md:bg-blue-400"></span>
+              Wholesale - Pros Only
+            </button>
+          </div>
+
+
+       
+          <button className="font-bold text-gray-600">Retail</button>
         </div>
+
+   
 
         {/* Searchbar*/}
 
@@ -58,24 +65,22 @@ export default function Header() {
               selectable={dt.selectable}
             />
           ))}
-        <IoMdMenu size={18} className='flex lg:hidden md:hidden'/>
+          <IoMdMenu size={18} className="flex lg:hidden md:hidden" />
         </div>
-
       </div>
 
-        {/* Searchbar for mobile*/}
+      {/* Searchbar for mobile*/}
 
-        <div className="flex-row items-center flex  min-w-full md:hidden lg:hidden my-2">
-          <input
-            type="text"
-            placeholder="Search by name, category.."
-            className="px-8 py-1 pr-10 text-center border border-[#1A355C] w-full md:w-96 focus:outline-none"
-          />
-          <div className="bg-[#1A355C]  rounded-r-[5px] p-[9px]">
-            <IoSearchOutline size={16} className="text-white" />
-
-          </div>
+      <div className="flex-row items-center flex  min-w-full md:hidden lg:hidden my-2">
+        <input
+          type="text"
+          placeholder="Search by name, category.."
+          className="px-8 py-1 pr-10 text-center border border-[#1A355C] w-full md:w-96 focus:outline-none"
+        />
+        <div className="bg-[#1A355C]  rounded-r-[5px] p-[9px]">
+          <IoSearchOutline size={16} className="text-white" />
         </div>
+      </div>
     </header>
   );
 }
