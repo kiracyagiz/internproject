@@ -40,7 +40,7 @@ const HomeTab = () => {
     <div>
         <div className="container hidden md:hidden lg:flex flex-row gap-x-16 mx-auto px-4 md:px-8 lg:px-[120px]">
        
-       <div className="flex flex-row items-center">
+       <div className="flex flex-row  items-center">
        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnjuWzLTeJFoaI21w7cY7n6mzft-vhXyy7vQ&s"
        className="w-14 h-14"
        ></img>

@@ -26,11 +26,22 @@ export default function Header() {
 
   return (
     <header>
-      <div className="flex flex-row  bg-[#EEEEEE] px-4 lg:px-0 justify-between lg:justify-evenly text-center items-center">
+      <div className="flex flex-row  lg:bg-[#EEEEEE] px-4 lg:px-0 justify-between lg:justify-evenly text-center items-center">
+
+
+      <div className="flex flex-row md:hidden lg:hidden items-center">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnjuWzLTeJFoaI21w7cY7n6mzft-vhXyy7vQ&s"
+       className="w-14 h-14"
+       ></img>
+        
+        <p className="text-blue-400 text-sm font-bold italic ">PainfulPleasures</p>
+       </div>
+
+
         {/* Tabs*/}
-        <div className="flex flex-row items-center gap-x-4">
+        <div className="hidden md:flex  flex-row items-center gap-x-4">
           <div>
-            <button className="md:relative md:bg-white font-bold md:text-blue-400 p-4 overflow-hidden">
+            <button className="  md:relative lg:relative  md:bg-white font-bold md:text-blue-400 p-4 overflow-hidden">
               <span className="md:absolute md:top-0 md:left-0 md:right-0 md:h-1  md:bg-blue-400"></span>
               Wholesale - Pros Only
             </button>
@@ -71,7 +82,7 @@ export default function Header() {
 
       {/* Searchbar for mobile*/}
 
-      <div className="flex-row items-center flex  min-w-full md:hidden lg:hidden my-2">
+      <div className="flex-row px-4 items-center flex  min-w-full md:hidden lg:hidden my-2">
         <input
           type="text"
           placeholder="Search by name, category.."
