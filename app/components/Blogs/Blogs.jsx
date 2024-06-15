@@ -47,7 +47,7 @@ const Blogs = () => {
         }
       </div>
 
-      <div className='text-center my-8'>
+      <div className=' hidden lg:block text-center my-8'>
       <ShopButton title={"See all blog posts"}/>
 
       </div>
@@ -74,6 +74,11 @@ const Blogs = () => {
         <FaChevronRight color='black '  />
       </button>
     </div>
+      </div>
+      
+      <div className=' block lg:hidden text-center my-8'>
+      <ShopButton title={"See all blog posts"}/>
+
       </div>
     </>
   )
