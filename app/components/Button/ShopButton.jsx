@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ShopButton = () => {
+const ShopButton = ({title}) => {
   return (
    <button className='bg-[#407EC9] text-center px-16 py-2 text-white'>
-   Shop Now
+   {title}
    </button>
   )
 }

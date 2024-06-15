@@ -43,6 +43,8 @@ const HomeTab = () => {
        <div className="flex flex-row  items-center">
        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnjuWzLTeJFoaI21w7cY7n6mzft-vhXyy7vQ&s"
        className="w-14 h-14"
+       alt="PainfulPleasures"
+
        ></img>
         
         <p className="text-blue-400 text-lg font-bold italic ">PainfulPleasures</p>

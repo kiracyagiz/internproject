@@ -24,7 +24,7 @@ const CategoryCard = ({ title }) => {
       <p className="text-left text-[#407EC9] font-bold  lg:text-lg flex lg:hidden">Shop now</p>
       </div>
       <div className="mt-4 hidden md:flex  text-center justify-center lg:mx-auto">
-          <ShopButton />
+          <ShopButton title={"Shop now"} />
         </div>
 
     </div>
